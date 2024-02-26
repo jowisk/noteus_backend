@@ -2,9 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
-
-const pgp = require('pg-promise')();
-
+require('dotenv').config()
 
 const notesRouter = require('./routes/notes')
 const authRouter = require('./routes/auth')
@@ -22,5 +20,5 @@ app.use("/auth", authRouter);
 
 
 app.listen(4000, () => {
-  console.log("Server on");
+  console.log("Server is running on port 4000");
 });

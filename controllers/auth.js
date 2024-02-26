@@ -4,6 +4,7 @@ const { TOKEN_SECRET } = require('../middleware/authMiddleware');
 const knex = require('knex')(require('../knexfile').development);
 
 const register = async (req, res) => {
+  console.log('hit register')
     const { username, password } = req.body;
   
     try {

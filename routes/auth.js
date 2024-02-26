@@ -6,7 +6,7 @@ const router = express.Router();
 router.post('/register', authQueries.register);
 router.post('/login', authQueries.login);
 
-router.use(authenticateToken); // Apply authentication middleware to all routes below this line
+router.use(authenticateToken);
 
 
 module.exports = router;
