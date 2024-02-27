@@ -12,12 +12,6 @@ router.post("/post", async (req, res) => {
     res.json(newNote);
 });
 
-// router.get("/get", async (req, res) => {
-//   const notes = await notesQueries.readNotes();
-//   console.log('notes', notes)
-//   res.json(notes);
-// });
-
 router.get('/get', async (req, res) => {
     console.log('req ' + req.query.user_id)
     try {
