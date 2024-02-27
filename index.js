@@ -13,7 +13,7 @@ app.use(
     extended: true,
   })
 );
-app.use(cors("https://localhost:5173"));
+app.use(cors(`${process.env.CLIENT_URL}`));
 
 app.use("/notes", notesRouter);
 app.use("/auth", authRouter);
