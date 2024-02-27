@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const TOKEN_SECRET = process.env.TOKEN_SECRET
 
 const authenticateToken = (req, res, next) => {
+  console.log('token')
   console.log('Headers:', req.headers);
   const token = req.headers.authorization && req.headers.authorization.split(' ')[1];
 
