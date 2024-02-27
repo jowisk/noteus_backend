@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const TOKEN_SECRET = process.env.TOKEN_SECRET
 
 const authenticateToken = (req, res, next) => {
+  console.log('Headers:', req.headers);
   const token = req.headers.authorization && req.headers.authorization.split(' ')[1];
 
   if (!token) {
@@ -13,7 +14,7 @@ const authenticateToken = (req, res, next) => {
     if (err) {
       return res.status(403).json({ error: 'Forbidden: Invalid token' });
     }
-    req.user = user; // Attach the user information to the request
+    req.user = user;
     next();
   });
 };
