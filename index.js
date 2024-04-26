@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const corsOptions = require('./config/corsOptions')
-require('dotenv').config();
+// require('dotenv').config();
 
 const notesRouter = require('./routes/notes')
 const authRouter = require('./routes/auth')
